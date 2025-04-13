@@ -6,7 +6,7 @@ rsync -av \
   --include="*.jpg" \
   --include="*.pdf" \
   --exclude="*" \
-  ~/Documents/ResearchVault/posts/ Ghost/Blog/MandaKausthubhBlog/content/posts/
+  ~/Documents/ResearchVault/posts/ ~/Ghost/Blog/MandaKausthubhBlog/content/posts/
 cd Ghost/Blog/MandaKausthubhBlog/
 cd public
 git add .
