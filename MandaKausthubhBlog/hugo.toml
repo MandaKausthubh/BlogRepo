@@ -1,0 +1,52 @@
+baseURL = 'https://mandakausthubh.github.io/'
+languageCode = 'en'
+title = 'My New Hugo Site'
+theme = "hugo-blog-awesome"
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/MandaKausthubh"
+
+[[params.socialIcons]]
+name = "twitter"
+url = "https://x.com/MandaKausthubh"
+
+
+[params]
+    goToTop = true
+    math = true
+    toc = true
+
+
+[Languages.en-gb]
+  languageName = "English"
+  languageCode = "en"
+  contentDir = "content"
+  weight = 1
+
+  [Languages.en.menu]
+  [[Languages.en.menu.main]]
+    # The page reference (pageRef) is useful for menu highlighting
+    # When pageRef is set, setting `url` is optional; it will be used as a fallback if the page is not found.
+    pageRef="/"
+    name = 'Home'
+    url = '/'
+    weight = 10
+  [[Languages.en.menu.main]]
+    pageRef="posts"
+    name = 'Posts'
+    url = '/posts/'
+    weight = 20
+  [[Languages.en.menu.main]]
+    pageRef="about"
+    name = 'CV'
+    url = '/about/'
+    weight = 1
+
+[Languages.en.params.author]
+  avatar = "avatar.png" # put the file in assets folder; also ensure that image has same height and width
+  # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
+  intro = "Mathematics and Machine Learning Enthusiast"
+  name = "Manda Kausthubh"
+  description = "A place where I share my thoughts and ideas on mathematics, machine learning, and more."
+
