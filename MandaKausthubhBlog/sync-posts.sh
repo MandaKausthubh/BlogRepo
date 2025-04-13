@@ -7,7 +7,7 @@ rsync -av \
   --include="*.pdf" \
   --exclude="*" \
   ~/Documents/ResearchVault/posts/ ~/Ghost/Blog/MandaKausthubhBlog/content/posts/
-cd ~Ghost/Blog/MandaKausthubhBlog/
+cd /Users/mandakausthubh/Ghost/Blog/MandaKausthubhBlog
 cd public
 git add .
 git commit -m "Update notes $(date)"
