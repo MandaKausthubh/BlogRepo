@@ -1,7 +1,12 @@
 baseURL = 'https://mandakausthubh.github.io/'
 languageCode = 'en'
-title = 'My New Hugo Site'
-theme = "hugo-blog-awesome"
+title = "Manda Kausthubh's blog"
+theme = 'hugo-blog-awesome'
+
+[params]
+    goToTop = true
+    math = true
+
 
 [[params.socialIcons]]
 name = "github"
@@ -12,16 +17,24 @@ name = "twitter"
 url = "https://x.com/MandaKausthubh"
 
 
-[params]
-    goToTop = true
-    math = true
-    toc = true
+[[params.socialIcons]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/kausthubh-manda/"
 
+[markup]
+  [markup.highlight]
+    noClasses = false
+  [markup.goldmark.renderer]
+    unsafe = true
+	[markup.tableOfContents]
+		startLevel = 2 # ToC starts from H2
+		endLevel = 4 # ToC ends at H4
+		ordered = false # generates <ul> instead of <ol>
 
-[Languages.en-gb]
+[Languages.en]
   languageName = "English"
   languageCode = "en"
-  contentDir = "content"
+  contentDir = "content/"
   weight = 1
 
   [Languages.en.menu]
@@ -38,15 +51,36 @@ url = "https://x.com/MandaKausthubh"
     url = '/posts/'
     weight = 20
   [[Languages.en.menu.main]]
-    pageRef="about"
+    pageRef="AboutMe"
     name = 'CV'
     url = '/about/'
-    weight = 1
+    weight = 30
+
+[Languages.en.params]
+  sitename = "Awesome hugo blog"
+  defaultColor = "dark" # set color mode: dark, light, auto
+  # Setting it to 'auto' applies the color scheme based on the visitor's device color preference.If you don't specify anything, ignore this parameter, or leave it blank,
+  # the default value is set to 'auto'.
+  # You can take a look at layouts/index.html for more information.
+  description = "Minimal Hugo blog theme with light and dark mode support"
+  mainSections = ['posts']
+  toc = true # set to false to disable table of contents 'globally'
+  tocOpen = true # set to true to open table of contents by default
+  goToTop = true # set to false to disable 'go to top' button
 
 [Languages.en.params.author]
   avatar = "avatar.png" # put the file in assets folder; also ensure that image has same height and width
   # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
-  intro = "Mathematics and Machine Learning Enthusiast"
-  name = "Manda Kausthubh"
-  description = "A place where I share my thoughts and ideas on mathematics, machine learning, and more."
+  intro = "Hi, I'm Kausthubh Manda"
+  name = "Kausthubh Manda"
+  description = "I'm an undergraduate student at IIIT Bangalore, India. I am interested in Machine Learning and Mathematics. This blog is a reflection of all my explorations of these fields, including Algorithms, Optimization, Topology and Measure theory, Computer Vision, NLP and Reinforcement Learning"
+
+[Languages.en.params.webmanifest]
+  name = "mandakausthubh_blog" # will use "params.sitename" or "title" by default
+  short_name = "MK4blog" # same as name
+  start_url = "/" # will use homepage url by default
+  theme_color = "#434648" # default is "#434648" (base color of text). Also will override html `<meta name="theme-color" />`
+  background_color = "#fff" # by default depend on "params.defaultColor" for "light" or "auto" will be set to "#fff" for dark will be "#131418" (color of dark mode background)
+  display = "standalone"
+
 
